@@ -19,4 +19,4 @@ COPY config.yaml ./
 RUN mkdir -p /app/data
 
 # Run the application
-CMD ["uv", "run", "apartamento"]
+CMD ["uv", "run", "apartamento", "--daemon"]
