@@ -1,0 +1,67 @@
+# Apartamento Configuration
+# Danish rental listing agent
+
+ntfy:
+  topic: "cph-apt-ijb"
+  server: "https://ntfy.sh"
+  priority: "default"  # min, low, default, high, urgent
+
+filters:
+  # Copenhagen and Greater Copenhagen areas
+  locations:
+    # Copenhagen proper
+    - "København"
+    - "København K"
+    - "København N"
+    - "København Ø"
+    - "København V"
+    - "København S"
+    - "København NV"
+    - "København SV"
+    - "Frederiksberg"
+    - "Amager"
+    - "Valby"
+    - "Vanløse"
+    - "Brønshøj"
+    # Greater Copenhagen
+    - "Gentofte"
+    - "Lyngby"
+    - "Herlev"
+    - "Gladsaxe"
+    - "Hvidovre"
+    - "Rødovre"
+    - "Ballerup"
+    - "Taastrup"
+    - "Albertslund"
+    - "Glostrup"
+    - "Brøndby"
+    - "Ishøj"
+
+  max_rent: 12000     # DKK per month
+  min_rent: null      # No minimum
+  min_size: 50        # m²
+  max_size: null      # No maximum
+  min_rooms: null     # Any number of rooms
+  max_rooms: null
+
+  # Required features
+  pets_allowed: true  # MUST allow pets
+  has_balcony: true   # MUST have balcony
+  furnished: null     # Don't care
+
+  # Date constraints
+  available_from: null  # Any availability date
+  available_to: null
+
+schedule:
+  interval_minutes: 10
+
+portals:
+  boligportal: true
+  lejebolig: true
+  bolighub: false
+  boligzonen: true
+  minlejebolig: true 
+  akutbolig: false
+
+data_dir: "data"
